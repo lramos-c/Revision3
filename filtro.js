@@ -8,8 +8,14 @@ const productos = [
   {nombre: "Zapato rojo", tipo: "zapato", color: "rojo", img: "./zapato-rojo.jpg"}
 ]
 
-const li = document.getElementsByName("lista-de-productos")
-const $i = document.querySelector('.input');
+//Modificar selector a getElementById
+const li = document.getElementById("lista-de-productos");
+//Modificar .input por input, para que seleccione el elemento, y no la clase 
+const $i = document.querySelector('input');
+
+//Made the function displayProductos
+function displayProductos(productos) {
+  
 
 for (let i = 0; i < productos.length; i++) {
   var d = document.createElement("div")
@@ -27,8 +33,9 @@ for (let i = 0; i < productos.length; i++) {
 
   li.appendChild(d)
 }
+}
 
-displayProductos(productos)
+displayProductos(productos);
 const botonDeFiltro = document.querySelector("button");
 
 botonDeFiltro.onclick = function() {
